@@ -1,0 +1,312 @@
+body {
+    background-color: #FB6B6B;
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    font-family: 'Recursive', sans-serif;
+    font-family: 'Righteous', cursive;
+
+}
+
+.PageOne{
+    width: 100vw;
+    height: fit-content;
+    margin: -30% auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.PageOne .logo{
+    width: 200px;
+    height: 260px;
+}
+
+.PageOne h1{
+    margin: 25px auto auto auto;
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.012em;
+    
+    color: #FFFFFF;
+}
+
+.PageOne button{
+    width: 246px;
+    height: 54px;
+    margin-top: 60px;
+    
+    background: #FFFFFF;
+    border: 1px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.PageOne button p{
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    
+    color: #D70900;    
+}
+
+.PageTwo{
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.PageTwo .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    margin: 5% auto 0 auto;
+
+}
+
+.PageTwo .header h1{
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: -0.012em;
+    
+    color: #FFFFFF;
+}
+
+.PageTwo .header img{
+    width: 62px;
+    height: 70px;
+}
+
+
+.PageTwo .start{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    background: #FFFFFF;
+    width: 300px;
+    height: 65px; 
+
+    margin-top: 50px;
+    
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.PageTwo .start p{
+    margin-left: 15px;
+    margin-right: auto;
+
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #333333;
+}
+
+.PageTwo .start img{
+    width: 20px;
+    height: 23px;
+
+    margin-right: 15px;
+    margin-left: auto;
+}
+
+.PageTwo .question{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+
+    width: 300px;
+    height: 131px;
+    margin-top: 50px;
+}
+
+.PageTwo .question p{
+    margin-left: 15px;
+    margin-right: auto;
+
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    
+    color: #333333;
+}
+
+.PageTwo .question img{
+    width: 20px;
+    height: 23px;
+
+    margin: auto 15px 10px auto;
+}
+
+.PageTwo .answer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+
+    width: 300px;
+    height: 131px;
+    margin-top: 50px;
+}
+
+.PageTwo .answer p{
+    margin-left: 15px;
+    margin-right: auto;
+
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    
+    color: #333333;
+}
+
+.PageTwo .answer img{
+    width: 20px;
+    height: 23px;
+
+    margin: auto 15px 10px auto;
+}
+
+.btn-answers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-answers .red{
+    width: 86px;
+    height: 37px;
+    
+    background: #FF3030;
+    border: none;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-answers .red p{
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 auto;
+    
+    color: #FFFFFF;
+}
+
+
+.btn-answers .yellow{
+    width: 86px;
+    height: 37px;
+    
+    background: #FF922E;
+    border-radius: 5px;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-answers .yellow p{
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 auto;
+    
+    color: #FFFFFF;
+}
+
+.btn-answers .green{
+    width: 86px;
+    height: 37px;
+    
+    background: #2FBE34;
+    border-radius: 5px;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-answers .green p{
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 auto;
+
+    color: #FFFFFF;
+}
+
+.footer{
+    width: 100%;
+    height: 150px;
+    margin-top: 46px;
+    bottom: 0;
+    
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);  
+}
+
+.footer p{
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    
+    color: #333333;
+}
