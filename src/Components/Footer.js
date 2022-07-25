@@ -1,57 +1,41 @@
-import yellow from "../assets/duvida.png"
-import red from "../assets/naosabe.png"
-import green from "../assets/respondido.png"
-
+import party from "../assets/party.png"
 
 function Footer(props){
-    const {icon, completed, number} = props
 
-    function imgIcon (iconImg){
-        if (icon === "red"){
-            return(
-                <img src={red} alt="não sei" />
-            )
-        }
+        function refreshPage() {
+            window.location.reload(false);
+          }
 
-        if (iconImg === "yellow"){
-            return(
-                <img src={yellow} alt="não lembrei" />
-            )
-        }
 
-        if (iconImg === "green"){
-            return(
-                <img src={green} alt="zap" />
-            )
-        }
-    }
-
-    if ( completed === 0){
+    if ( props.completed === 0){
         return(
             <div className="footer">
-                <p> {completed} / {number} </p>
-                <p>nada</p>
+                <p> {props.completed} / {props.number} CONCLUÍDOS</p>
             </div>
         )
     }
 
-    if ( completed !== number && completed < 4){
+    if ( props.completed !== props.number && props.completed < 4){
         return(
             <div className="footer">
-                <p> {completed} / {number} </p>
-                <div className="icons">  {icon.map(iconImg => imgIcon(iconImg))}
+                <p> {props.completed} / {props.number} </p>
+                {/* <div className="icons">  {imgIcon.map((icon) => props.icon)} </div>*/}
+
+            </div>
+        )
+    }
+
+    if(props.completed === 4){
+        return(
+            <div className="footer">
+                <div className="parabens">
+                    <img src={party} alt="parabéns" />
+                    <p>Parabéns!</p>
                 </div>
+                <p>Você não esqueceu de nenhum flashcard!</p>
+                <p>{props.completed} / {props.number}</p>
+                <button onClick={refreshPage}>Reiniciar</button>
             </div>
-        )
-    }
-
-    else{
-        return(
-
-                        <div className="footer">
-                        <p>Completou</p>
-                        <p> 4 / 4</p> 
-                    </div>
         )
     }
 

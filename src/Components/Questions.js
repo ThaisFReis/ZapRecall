@@ -7,25 +7,9 @@ function Questions(props){
     const [card, setCard] = useState("none")
     const [icon, setIcon] = useState("")
 
-    function Red(){
-        setIcon("red")
-        icon("red")
-        props.callback(props.completed + 1)
-    }
-
-    function Red(){
-        setIcon("yellow")
-        icon("yellow")
-    }
-
-    function Green(){
-        setIcon("green")
-    }
-
-
     if (card === "none"){
         return(
-                <div className="start">
+               <div className="start">
                     <p>{props.number}</p>
                     <img src={seta} alt="seta" onClick={()=> setCard("show")}/>
                 </div>
@@ -47,16 +31,21 @@ function Questions(props){
                 <div className="answer">
                     <p>{props.anwser}</p>
                     <div className="btn-answers">
-                        <button className="red" onClick={Red}>
+                        <button className="red" onClick={()=> {
+                        props.callback(props.completed + 1)
+                        setCard("answered")
+                        setIcon("red")}}>
                             <p>Não lembrei</p>
                         </button>
                         <button className="yellow" onClick={()=>{
                             props.callback(props.completed + 1)
+                            setCard("answered")
                             setIcon("yellow")}}>
                             <p>Quase não lembrei</p>
                         </button>
                         <button className="green" onClick={()=>{
                             props.callback(props.completed + 1)
+                            setCard("answered")
                             setIcon("green")}}>
                             <p>Zap!</p>
                         </button>
@@ -64,6 +53,34 @@ function Questions(props){
                 </div>
             </>
         )
+        
+    }
+
+    if (card === "answered" && icon === "red"){
+        return(
+            <div className="start red">
+                <p>{props.number}</p>
+            </div>
+        )
+
+    }
+
+    if (card === "answered" && icon === "yellow"){
+        return(
+            <div className="start yellow">
+                <p>{props.number}</p>
+            </div>
+        )
+
+    }
+
+    if (card === "answered" && icon === "green"){
+        return(
+            <div className="start green">
+                <p>{props.number}</p>
+            </div>
+        )
+
     }
 
 }
